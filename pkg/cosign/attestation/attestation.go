@@ -33,6 +33,10 @@ const (
 	CosignCustomProvenanceV01 = "cosign.sigstore.dev/attestation/v1"
 )
 
+type RefPredicate struct {
+	Ref, Digest, Timestamp string
+}
+
 // CosignPredicate specifies the format of the Custom Predicate.
 type CosignPredicate struct {
 	Data      string
@@ -51,6 +55,9 @@ type GenerateOpts struct {
 	// Repo context of the reference.
 	Repo string
 
+	// Full ref of the Image.
+	Ref string
+
 	// Function to return the time to set
 	Time func() time.Time
 }
@@ -62,13 +69,13 @@ func GenerateStatement(opts GenerateOpts) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
+	if opts.Time == nil {
+		opts.Time = time.Now
+	}
+	now := opts.Time()
+	stamp := now.UTC().Format(time.RFC3339)
 	switch opts.Type {
 	case "custom":
-		if opts.Time == nil {
-			opts.Time = time.Now
-		}
-		now := opts.Time()
-		stamp := now.UTC().Format(time.RFC3339)
 		return generateCustomStatement(rawPayload, opts.Digest, opts.Repo, stamp)
 	case "provenance":
 		return generateProvenanceStatement(rawPayload, opts.Digest, opts.Repo)
@@ -76,6 +83,8 @@ func GenerateStatement(opts GenerateOpts) (interface{}, error) {
 		return generateSPDXStatement(rawPayload, opts.Digest, opts.Repo)
 	case "link":
 		return generateLinkStatement(rawPayload, opts.Digest, opts.Repo)
+	case "ref":
+		return generateTagStatement(rawPayload, opts.Digest, opts.Repo, opts.Ref, stamp)
 	default:
 		return nil, errors.New(fmt.Sprintf("we don't know this predicate type: '%s'", opts.Type))
 	}
@@ -96,12 +105,22 @@ func generateStatementHeader(digest, repo, predicateType string) in_toto.Stateme
 	}
 }
 
-//
 func generateCustomStatement(rawPayload []byte, digest, repo, timestamp string) (interface{}, error) {
 	return in_toto.Statement{
 		StatementHeader: generateStatementHeader(digest, repo, CosignCustomProvenanceV01),
 		Predicate: CosignPredicate{
 			Data:      string(rawPayload),
+			Timestamp: timestamp,
+		},
+	}, nil
+}
+
+func generateTagStatement(rawPayload []byte, digest, repo, ref, timestamp string) (interface{}, error) {
+	return in_toto.Statement{
+		StatementHeader: generateStatementHeader(digest, repo, "ref-blah-blah"),
+		Predicate: RefPredicate{
+			Ref:       ref,
+			Digest:    digest,
 			Timestamp: timestamp,
 		},
 	}, nil

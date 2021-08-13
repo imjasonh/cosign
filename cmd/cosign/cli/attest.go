@@ -50,7 +50,7 @@ func Attest() *ffcli.Command {
 		predicatePath = flagset.String("predicate", "", "path to the predicate file.")
 		force         = flagset.Bool("f", false, "skip warnings and confirmations")
 		idToken       = flagset.String("identity-token", "", "[EXPERIMENTAL] identity token to use for certificate from fulcio")
-		predicateType = flagset.String("type", "custom", "specify predicate type (default: custom) (provenance|link|spdx)")
+		predicateType = flagset.String("type", "custom", "specify predicate type (default: custom) (provenance|link|spdx|tag)")
 	)
 	return &ffcli.Command{
 		Name:       "attest",
@@ -145,6 +145,7 @@ func AttestCmd(ctx context.Context, ko KeyOpts, imageRef string, certPath string
 		Type:   predicateType,
 		Digest: h.Hex,
 		Repo:   repo.String(),
+		Ref:    ref.String(),
 	})
 	if err != nil {
 		return err
