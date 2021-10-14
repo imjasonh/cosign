@@ -15,7 +15,8 @@
 name: Cosigned KinD E2E
 
 on:
-  push: ['fix-ci-fork']
+  push:
+    branches: ['fix-ci-fork']
   pull_request:
     branches: [ 'main', 'release-*' ]
 
