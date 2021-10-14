@@ -42,7 +42,7 @@ jobs:
           go install github.com/google/ko@v0.9.3
 
           # Login to ghcr.io
-          echo ${{ github.token }} | ko login --username=${{ github.repository_owner }} --password-stdin
+          echo ${{ github.token }} | ko login ghcr.io --username=${{ github.repository_owner }} --password-stdin
 
           # Setup ko, publish an image and sign it.
           KO_DOCKER_REPO=ghcr.io/${{ github.repository_owner }}/${{ github.repository }}
