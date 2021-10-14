@@ -15,16 +15,11 @@
 name: Cosigned KinD E2E
 
 on:
+  push: ['fix-ci-fork']
   pull_request:
     branches: [ 'main', 'release-*' ]
 
-defaults:
-  run:
-    shell: bash
-    working-directory: ./src/github.com/sigstore/cosign
-
 jobs:
-
   e2e-tests:
     name: e2e tests
     runs-on: ubuntu-latest
@@ -49,7 +44,6 @@ jobs:
           cluster-suffix: c${{ github.run_id }}.local
 
     env:
-      GOPATH: ${{ github.workspace }}
       # https://github.com/google/go-containerregistry/pull/125 allows insecure registry for
       # '*.local' hostnames.
       REGISTRY_NAME: registry.local
