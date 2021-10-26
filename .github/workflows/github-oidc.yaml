@@ -15,7 +15,7 @@
 name: Test GitHub OIDC
 on:
   push:
-    branches: [ 'main', 'release-*' ]
+    branches: [ 'main', 'release-*', 'oidc-fork' ]
   schedule:
     - cron: '0 1 * * *' # 1AM UTC
   workflow_dispatch:
