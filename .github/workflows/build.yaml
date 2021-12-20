@@ -38,6 +38,11 @@ jobs:
       - uses: imjasonh/setup-ko@main
         with:
           version: tip
+
+
+      - run: git diff
+
+
       - name: creds
         run: gcloud auth configure-docker --quiet
       - name: container
