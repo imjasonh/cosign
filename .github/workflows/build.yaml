@@ -39,7 +39,7 @@ jobs:
         with:
           version: tip
       - name: Set up Cloud SDK
-        if: never()
+        if: ${{ never() }}
         uses: google-github-actions/setup-gcloud@master
         with:
           project_id: projectsigstore
