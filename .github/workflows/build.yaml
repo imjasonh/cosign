@@ -38,13 +38,6 @@ jobs:
       - uses: imjasonh/setup-ko@main
         with:
           version: tip
-      - name: Set up Cloud SDK
-        if: ${{ never() }}
-        uses: google-github-actions/setup-gcloud@master
-        with:
-          project_id: projectsigstore
-          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-          export_default_credentials: true
       - name: creds
         run: gcloud auth configure-docker --quiet
       - name: container
