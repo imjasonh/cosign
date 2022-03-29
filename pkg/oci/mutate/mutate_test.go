@@ -177,11 +177,14 @@ func TestSignEntity(t *testing.T) {
 				t.Fatalf("AttachFileToEntity() = %v", err)
 			}
 
-			f, err := se.Attachment("sbom")
+			fs, err := se.Attachments("sbom")
 			if err != nil {
 				t.Fatalf("Attachment(sbom) = %v", err)
 			}
-			got, err := f.Payload()
+			if l := len(fs); l != 1 {
+				t.Fatalf("wanted 1 sbom, got %d", l)
+			}
+			got, err := fs[0].Payload()
 			if err != nil {
 				t.Fatalf("Payload() = %v", err)
 			}
@@ -189,9 +192,8 @@ func TestSignEntity(t *testing.T) {
 				t.Errorf("Payload() = %v, wanted %v", got, want)
 			}
 
-			f, err = se.Attachment("gitbom")
-			if err == nil {
-				t.Errorf("Attachment(gitbom) = %T, wanted error", f)
+			if fs, err = se.Attachments("gitbom"); err == nil {
+				t.Errorf("Attachments(gitbom) = %T, wanted error", fs)
 			}
 		}
 	})

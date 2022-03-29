@@ -91,12 +91,15 @@ func TestSignedImageWithAttachment(t *testing.T) {
 		t.Fatalf("Signatures() = %v", err)
 	}
 
-	file, err := si.Attachment("sbom")
+	files, err := si.Attachments("sbom")
 	if err != nil {
 		t.Fatalf("Signatures() = %v", err)
 	}
+	if l := len(files); l != 1 {
+		t.Fatalf("wanted 1 sbom, got %d", l)
+	}
 
-	payload, err := file.Payload()
+	payload, err := files[0].Payload()
 	if err != nil {
 		t.Errorf("Payload() = %v", err)
 	}

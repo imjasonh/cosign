@@ -26,6 +26,7 @@ type SignedEntity interface {
 	// Base64Signature because it's baked into the payload.
 	Attestations() (Signatures, error)
 
-	// Attachment returns a named entity associated with this entity, or error if not found.
-	Attachment(name string) (File, error)
+	// Attachments returns the named entities associated with this entity,
+	// or error if not found.
+	Attachments(name string) ([]File, error)
 }

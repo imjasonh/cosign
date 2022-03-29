@@ -81,8 +81,8 @@ func (i *index) Attestations() (oci.Signatures, error) {
 	return &sigs{img}, nil
 }
 
-// Attestations implements oci.SignedImage
-func (i *index) Attachment(name string) (oci.File, error) {
+// Attachments implements oci.SignedImage
+func (i *index) Attachments(name string) ([]oci.File, error) {
 	return nil, fmt.Errorf("not yet implemented")
 }
 

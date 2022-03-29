@@ -42,18 +42,16 @@ func (ks ephemeralSigner) Sign(ctx context.Context, payload io.Reader) (oci.Sign
 		return nil, nil, errors.Wrap(err, "retrieving the static public key somehow failed")
 	}
 
-	payloadBytes, err := io.ReadAll(payload)
-	if err != nil {
-		return nil, nil, err
-	}
+	var buf bytes.Buffer
+	tee := io.TeeReader(payload, &buf)
 
-	sig, err := ks.signer.SignMessage(bytes.NewReader(payloadBytes))
+	sig, err := ks.signer.SignMessage(tee)
 	if err != nil {
 		return nil, nil, err
 	}
 
 	b64sig := base64.StdEncoding.EncodeToString(sig)
-	ociSig, err := static.NewSignature(payloadBytes, b64sig)
+	ociSig, err := static.NewSignature(buf.Bytes(), b64sig)
 	if err != nil {
 		return nil, nil, err
 	}

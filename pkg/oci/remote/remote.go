@@ -144,8 +144,8 @@ func attestations(digestable digestable, o *options) (oci.Signatures, error) {
 	return Signatures(o.TargetRepository.Tag(normalize(h, o.TagPrefix, o.AttestationSuffix)), o.OriginalOptions...)
 }
 
-// attachment is a shared implementation of the oci.Signed* Attachment method.
-func attachment(digestable digestable, attName string, o *options) (oci.File, error) {
+// attachments is a shared implementation of the oci.Signed* Attachments method.
+func attachments(digestable digestable, attName string, o *options) ([]oci.File, error) {
 	h, err := digestable.Digest()
 	if err != nil {
 		return nil, err
@@ -158,14 +158,14 @@ func attachment(digestable digestable, attName string, o *options) (oci.File, er
 	if err != nil {
 		return nil, err
 	}
-	if len(ls) != 1 {
-		return nil, fmt.Errorf("expected exactly one layer in attachment, got %d", len(ls))
+	var out []oci.File
+	for _, l := range ls {
+		out = append(out, &attached{
+			SignedImage: img,
+			layer:       l,
+		})
 	}
-
-	return &attached{
-		SignedImage: img,
-		layer:       ls[0],
-	}, nil
+	return out, nil
 }
 
 type attached struct {

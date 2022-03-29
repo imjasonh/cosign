@@ -112,14 +112,16 @@ func TreeCmd(ctx context.Context, regOpts options.RegistryOptions, imageRef stri
 		return err
 	}
 
-	sbombs, err := simg.Attachment("sbom")
 	var sbomLayers []v1.Layer
+	files, err := simg.Attachments("sbom")
 	if err == nil {
-		layers, err := sbombs.Layers()
-		if err != nil {
-			return err
+		for _, f := range files {
+			layers, err := f.Layers()
+			if err != nil {
+				return err
+			}
+			sbomLayers = append(sbomLayers, layers...)
 		}
-		sbomLayers = append(sbomLayers, layers...)
 	}
 
 	scsaMap[sbomRef] = sbomLayers

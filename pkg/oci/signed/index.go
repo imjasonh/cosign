@@ -69,6 +69,6 @@ func (*index) Attestations() (oci.Signatures, error) {
 }
 
 // Attestations implements oci.SignedImage
-func (*index) Attachment(name string) (oci.File, error) {
+func (*index) Attachments(name string) ([]oci.File, error) {
 	return nil, errors.New("unimplemented")
 }

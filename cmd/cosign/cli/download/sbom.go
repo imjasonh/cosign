@@ -42,14 +42,15 @@ func SBOMCmd(ctx context.Context, regOpts options.RegistryOptions, imageRef stri
 		return nil, err
 	}
 
-	file, err := se.Attachment("sbom")
+	files, err := se.Attachments("sbom")
 	if err != nil {
 		return nil, err
 	}
 
 	// "attach sbom" attaches a single static.NewFile
+	// TODO: allow downloading multiple attached SBOMs.
 	sboms := make([]string, 0, 1)
-
+	file := files[0]
 	mt, err := file.FileMediaType()
 	if err != nil {
 		return nil, err

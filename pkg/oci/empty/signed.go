@@ -40,7 +40,7 @@ func (se *signedImage) Attestations() (oci.Signatures, error) {
 	return se.attestations, nil
 }
 
-func (se *signedImage) Attachment(name string) (oci.File, error) {
+func (se *signedImage) Attachments(name string) ([]oci.File, error) {
 	return nil, errors.New("no attachments")
 }
 
