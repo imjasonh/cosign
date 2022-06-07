@@ -54,7 +54,10 @@ import (
 	sigPayload "github.com/sigstore/sigstore/pkg/signature/payload"
 
 	// Loads OIDC providers
-	_ "github.com/sigstore/cosign/pkg/providers/all"
+	_ "github.com/imjasonh/sigstore-oidc-google"
+	_ "github.com/imjasonh/sigstore-oidc-spiffe"
+	_ "github.com/sigstore/cosign/pkg/providers/filesystem"
+	_ "github.com/sigstore/cosign/pkg/providers/github"
 )
 
 func ShouldUploadToTlog(ctx context.Context, ref name.Reference, force bool, url string) bool {

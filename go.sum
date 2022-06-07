@@ -1422,6 +1422,10 @@ github.com/imdario/mergo v0.3.10/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH
 github.com/imdario/mergo v0.3.11/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH0dnCYA=
 github.com/imdario/mergo v0.3.12 h1:b6R2BslTbIEToALKP7LxUvijTsNI9TAe80pLWN2g/HU=
 github.com/imdario/mergo v0.3.12/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH0dnCYA=
+github.com/imjasonh/sigstore-oidc-google v0.0.0-20220607170736-932648fb5768 h1:eXax4KIbu358RtzfqjkTPkOVIfhB+ITDg3KaC+sQPv8=
+github.com/imjasonh/sigstore-oidc-google v0.0.0-20220607170736-932648fb5768/go.mod h1:pu9wsQVRi8E4Eyn5oCCXorUrGdxunlFBfhe+U1oY4wM=
+github.com/imjasonh/sigstore-oidc-spiffe v0.0.0-20220607175741-93869d835563 h1:Rp2Rjyq040iI2xhOQQvBQqnvhL1wDrDxe4umlqjQ/1E=
+github.com/imjasonh/sigstore-oidc-spiffe v0.0.0-20220607175741-93869d835563/go.mod h1:kt6GMb/H2zk3wk4vxqdM1mizxvfMvCH80kgLEWf3H0Q=
 github.com/in-toto/in-toto-golang v0.3.4-0.20211211042327-af1f9fb822bf h1:FU8tuL4IWx/Hq55AO4+13AZn3Kd6uk3Z44OCIZ9coTw=
 github.com/in-toto/in-toto-golang v0.3.4-0.20211211042327-af1f9fb822bf/go.mod h1:twl9XmClqj6/h/HANQQYaJZVKPPW/Mz53bd2t6UXGQA=
 github.com/inconshreveable/mousetrap v1.0.0 h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NHg9XEKhtSvM=
@@ -2043,6 +2047,7 @@ github.com/shopspring/decimal v1.2.0/go.mod h1:DKyhrW/HYNuLGql+MJL6WCR6knT2jwCFR
 github.com/shurcooL/go v0.0.0-20180423040247-9e1955d9fb6e/go.mod h1:TDJrrUr11Vxrven61rcy3hJMUqaf/CLWYhHNPmT14Lk=
 github.com/shurcooL/go-goon v0.0.0-20170922171312-37c2f522c041/go.mod h1:N5mDOmsrJOB+vfqUK+7DmDyjhSLIIBnXo9lvZJj3MWQ=
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
+github.com/sigstore/cosign v1.9.0/go.mod h1:AkVaXopS0Z/3h/hVOyvIwKrXMOilKmlLgUlr8FkrKQM=
 github.com/sigstore/fulcio v0.1.2-0.20220114150912-86a2036f9bc7 h1:XE7A9lJ+wYhmUFBWYTaw3Ph943zHB4iBYd5R0SX0ZOA=
 github.com/sigstore/fulcio v0.1.2-0.20220114150912-86a2036f9bc7/go.mod h1:ANQivY/lfOp9hN92S813LEthkm/kit96hzeIF3SNoZA=
 github.com/sigstore/rekor v0.4.1-0.20220114213500-23f583409af3 h1:mbqXrm8YZXN/cJMGeBkgPnswtfrOxDE1f7QZdJ+POQE=
