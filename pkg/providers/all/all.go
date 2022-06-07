@@ -13,6 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Deprecated: Link in desired providers instead.
 package all
 
 import (
@@ -27,7 +28,10 @@ import (
 
 // Alias these methods, so that folks can import this to get all providers.
 var (
-	Enabled     = providers.Enabled
-	Provide     = providers.Provide
+	// Deprecated: Use pkg/providers.Enabled.
+	Enabled = providers.Enabled
+	// Deprecated: Use pkg/providers.Provide.
+	Provide = providers.Provide
+	// Deprecated: Use pkg/providers.ProvideFrom.
 	ProvideFrom = providers.ProvideFrom
 )
