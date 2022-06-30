@@ -28,7 +28,7 @@ require (
 	github.com/sigstore/sigstore v1.0.2-0.20211210190220-04746d994282
 	github.com/spf13/cobra v1.3.0
 	github.com/spf13/viper v1.10.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	github.com/theupdateframework/go-tuf v0.0.0-20211213174152-470b5ab00139
 	github.com/xanzy/go-gitlab v0.52.2
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
@@ -45,7 +45,7 @@ require (
 	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
-	github.com/spiffe/go-spiffe/v2 v2.0.0-beta.10
+	github.com/spiffe/go-spiffe/v2 v2.1.1
 	github.com/urfave/cli v1.22.5 // indirect
 	go.opentelemetry.io/contrib v1.3.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.11.0 // indirect
