@@ -31,7 +31,7 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.13.0
 	github.com/spiffe/go-spiffe/v2 v2.1.1
-	github.com/stretchr/testify v1.8.0
+	github.com/stretchr/testify v1.8.1
 	github.com/theupdateframework/go-tuf v0.3.1
 	github.com/transparency-dev/merkle v0.0.1
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
