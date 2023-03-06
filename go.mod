@@ -34,17 +34,17 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.14.0
 	github.com/spiffe/go-spiffe/v2 v2.1.2
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.8.2
 	github.com/theupdateframework/go-tuf v0.5.2-0.20220930112810-3890c1e7ace4
 	github.com/transparency-dev/merkle v0.0.1
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
 	github.com/xanzy/go-gitlab v0.78.0
-	go.step.sm/crypto v0.23.1
-	golang.org/x/crypto v0.5.0
-	golang.org/x/oauth2 v0.4.0
+	go.step.sm/crypto v0.25.2
+	golang.org/x/crypto v0.6.0
+	golang.org/x/oauth2 v0.5.0
 	golang.org/x/sync v0.1.0
-	golang.org/x/term v0.4.0
-	google.golang.org/api v0.106.0
+	golang.org/x/term v0.5.0
+	google.golang.org/api v0.110.0
 	k8s.io/api v0.23.5
 	k8s.io/apimachinery v0.23.5
 	k8s.io/client-go v0.23.5
@@ -53,17 +53,17 @@ require (
 )
 
 require (
-	cloud.google.com/go/compute v1.14.0 // indirect
+	cloud.google.com/go/compute v1.18.0 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v0.8.0 // indirect
-	cloud.google.com/go/kms v1.7.0 // indirect
+	cloud.google.com/go/kms v1.8.0 // indirect
 	filippo.io/edwards25519 v1.0.0 // indirect
 	github.com/AliyunContainerService/ack-ram-tool/pkg/credentials/alibabacloudsdkgo/helper v0.2.0 // indirect
-	github.com/Azure/azure-sdk-for-go v67.1.0+incompatible // indirect
+	github.com/Azure/azure-sdk-for-go v68.0.0+incompatible // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.28 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.21 // indirect
-	github.com/Azure/go-autorest/autorest/azure/auth v0.5.11 // indirect
+	github.com/Azure/go-autorest/autorest/azure/auth v0.5.12 // indirect
 	github.com/Azure/go-autorest/autorest/azure/cli v0.4.6 // indirect
 	github.com/Azure/go-autorest/autorest/date v0.3.0 // indirect
 	github.com/Azure/go-autorest/autorest/to v0.4.0 // indirect
@@ -87,7 +87,7 @@ require (
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
-	github.com/aws/aws-sdk-go v1.44.155 // indirect
+	github.com/aws/aws-sdk-go v1.44.210 // indirect
 	github.com/aws/aws-sdk-go-v2 v1.17.2 // indirect
 	github.com/aws/aws-sdk-go-v2/config v1.18.4 // indirect
 	github.com/aws/aws-sdk-go-v2/credentials v1.13.4 // indirect
@@ -106,7 +106,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
-	github.com/cespare/xxhash/v2 v2.1.2 // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e // indirect
 	github.com/clbanning/mxj/v2 v2.5.6 // indirect
 	github.com/cockroachdb/apd/v2 v2.0.1 // indirect
@@ -151,7 +151,7 @@ require (
 	github.com/google/tink/go v1.7.0 // indirect
 	github.com/google/trillian v1.5.1-0.20220819043421-0a389c4bb8d9 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.2.1 // indirect
+	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.7.0 // indirect
 	github.com/googleapis/gnostic v0.5.5 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
@@ -244,14 +244,14 @@ require (
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/exp v0.0.0-20220823124025-807a23277127 // indirect
 	golang.org/x/mod v0.7.0 // indirect
-	golang.org/x/net v0.5.0 // indirect
-	golang.org/x/sys v0.4.0 // indirect
-	golang.org/x/text v0.6.0 // indirect
+	golang.org/x/net v0.7.0 // indirect
+	golang.org/x/sys v0.5.0 // indirect
+	golang.org/x/text v0.7.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.5.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20230109162033-3c3c17ce83e6 // indirect
-	google.golang.org/grpc v1.51.0 // indirect
+	google.golang.org/genproto v0.0.0-20230209215440-0dfe4f8abfcc // indirect
+	google.golang.org/grpc v1.53.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
