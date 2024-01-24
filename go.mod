@@ -25,7 +25,7 @@ require (
 	github.com/mozillazg/docker-credential-acr-helper v0.3.0
 	github.com/open-policy-agent/opa v0.48.0
 	github.com/pkg/errors v0.9.1
-	github.com/secure-systems-lab/go-securesystemslib v0.4.0
+	github.com/secure-systems-lab/go-securesystemslib v0.7.0
 	github.com/sigstore/fulcio v1.0.0
 	github.com/sigstore/rekor v1.0.1
 	github.com/sigstore/sigstore v1.5.0
@@ -34,16 +34,16 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.14.0
 	github.com/spiffe/go-spiffe/v2 v2.1.2
-	github.com/stretchr/testify v1.8.1
-	github.com/theupdateframework/go-tuf v0.5.2-0.20220930112810-3890c1e7ace4
+	github.com/stretchr/testify v1.8.4
+	github.com/theupdateframework/go-tuf v0.7.0
 	github.com/transparency-dev/merkle v0.0.1
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
 	github.com/xanzy/go-gitlab v0.78.0
 	go.step.sm/crypto v0.23.1
-	golang.org/x/crypto v0.5.0
+	golang.org/x/crypto v0.16.0
 	golang.org/x/oauth2 v0.4.0
 	golang.org/x/sync v0.1.0
-	golang.org/x/term v0.4.0
+	golang.org/x/term v0.15.0
 	google.golang.org/api v0.106.0
 	k8s.io/api v0.23.5
 	k8s.io/apimachinery v0.23.5
@@ -243,12 +243,12 @@ require (
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/exp v0.0.0-20220823124025-807a23277127 // indirect
-	golang.org/x/mod v0.7.0 // indirect
-	golang.org/x/net v0.5.0 // indirect
-	golang.org/x/sys v0.4.0 // indirect
-	golang.org/x/text v0.6.0 // indirect
+	golang.org/x/mod v0.8.0 // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
-	golang.org/x/tools v0.5.0 // indirect
+	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230109162033-3c3c17ce83e6 // indirect
 	google.golang.org/grpc v1.51.0 // indirect
